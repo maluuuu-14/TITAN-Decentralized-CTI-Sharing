@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TITAN - CTI Sharing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>TITAN - Decentralized CTI Sharing</h1>
+
+<div class="card">
+    <h2>Register Organization</h2>
+    <input type="text" id="orgName" placeholder="Organization Name">
+    <button onclick="registerOrg()">Register</button>
+</div>
+
+<div class="card">
+    <h2>Submit CTI</h2>
+    <input type="text" id="submitterOrgName" placeholder="Enter Your Organization Name">
+    <select id="threatType">
+        <option value="" disabled selected>Select Threat Type</option>
+        <option value="Malware">Malware</option>
+        <option value="Phishing">Phishing</option>
+        <option value="Ransomware">Ransomware</option>
+        <option value="DDoS">DDoS</option>
+    </select>
+    <input type="text" id="ctiData" placeholder="Enter Threat Data">
+    
+    <button onclick="submitCTI()">SUBMIT</button>
+</div>
+
+<div class="card">
+    <h2>Live CTI Feed</h2>
+    <input type="text" id="viewerOrgName" placeholder="Enter Organization Name to Access">
+    <button onclick="loadThreatFeed()">Unlock Feed</button>
+    <div id="ctiFeed" style="margin-top: 15px;"></div>
+</div>
+
+<div class="card">
+    <h2>Rate CTI Data</h2>
+    <input type="text" id="raterOrgName" placeholder="Your Organization Name">
+    <input type="number" id="targetCtiId" placeholder="Enter CTI ID (e.g., 1)" min="1">
+    <input type="number" id="ratingScore" placeholder="Rating (1-5)" min="1" max="5">
+    <button onclick="rateCTI()">Submit Rating</button>
+</div>
+
+<div class="card">
+    <h2>Reputation Leaderboard</h2>
+    <p style="color: #aaa; font-size: 0.9em;">Top rated threat intelligence providers.</p>
+    
+    <input type="text" id="leaderboardViewerName" placeholder="Enter Your Organization Name">
+    <button onclick="loadLeaderboard()">Unlock Rankings</button>
+    
+    <div id="leaderboardFeed" ></div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

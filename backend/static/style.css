@@ -1,0 +1,115 @@
+/* style.css */
+:root {
+    --bg-color: #0b0e14;
+    --card-bg: #151921;
+    --primary-glow: #00ff9d;
+    --text-main: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #1f6feb;
+    --border: #30363d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: var(--primary-glow);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    border-color: var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: var(--primary-glow);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 24px);
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: white;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(31, 111, 235, 0.3);
+}
+
+button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--primary-glow);
+    border: 1px solid var(--primary-glow);
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-glow);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+}
+
+#ctiList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+#ctiList li {
+    background: #1c2128;
+    border: 1px solid var(--border);
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+#repResult {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--primary-glow);
+    text-align: center;
+}
